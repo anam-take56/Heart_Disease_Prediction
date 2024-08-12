@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required><br><br>
+
+            <label for="high_bp">High Blood Pressure (1 for yes, 0 for no):</label>
+            <input type="text" id="high_bp" name="high_bp" required><br><br>
+
+            <label for="phys_hlth">Physical Health Score:</label>
+            <input type="text" id="phys_hlth" name="phys_hlth" required><br><br>
+
+            <label for="high_chol">High Cholesterol (1 for yes, 0 for no):</label>
+            <input type="text" id="high_chol" name="high_chol" required><br><br>
+
+            <label for="diabetes">Diabetes (1 for yes, 0 for no):</label>
+            <input type="text" id="diabetes" name="diabetes" required><br><br>
+
+            <label for="smoker">Smoker (1 for yes, 0 for no):</label>
+            <input type="text" id="smoker" name="smoker" required><br><br>
+
+            <label for="sex">Sex (1 for male, 0 for female):</label>
+            <input type="text" id="sex" name="sex" required><br><br>
+
+            <label for="ment_hlth">Mental Health Score:</label>
+            <input type="text" id="ment_hlth" name="ment_hlth" required><br><br>
+
+            <label for="bmi">BMI:</label>
+            <input type="text" id="bmi" name="bmi" required><br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
